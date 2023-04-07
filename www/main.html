@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery Mobile</title>
+    <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css" />
+    <script src="./js/jquery-1.11.1.min.js"></script>
+    <script src="./js/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+</head>
+
+<body>
+
+    <div data-role="page" id="home">
+        <div data-role="header" data-position="fixed">
+            <h1>KAKAO</h1>
+            <button id="mybutton" type="button" class="btn btn-warning">info</button>
+            <button id="mybutton" type="button" class="btn btn-warning" onclick="navigator.vibrate(3000)">진동</button>
+
+        </div>
+        <div data-role="content" style="text-align:center">
+            <img src="./img/Kakaofriends.png" style="max-width: 50%; height: auto;">
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#intro" style="color:#ffe812">About KAKAO</a></li>
+                <li><a href="#movie" data-inset="true">MOVIE</a></li>
+                <li><a href="#wizard3-1" data-inset="true">MUSIC</a></li>
+                <li><a href="#gallery">PICTURE</a></li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>2019575015 김진선</h1>
+        </div>
+    </div>
+
+    <div data-role="page" id="intro">
+        <div data-role="header" data-position="fixed">
+            <!-- <a href="#home" data-direction="reverse"><</a> -->
+            <button id="mybutton" class="btn btn-warning" onclick="location.href='#home'">home</button>
+            <h1>about KAKAO</h1>
+        </div>
+        <div style="text-align: center;">
+            <img src="./img/kakaofriends2.jpg" style="max-width: 100%; height: auto;">
+        </div>
+        <div data-role="collapsible-set">
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>카카오 역사</h3>
+                <p>창업자 김범수는 미국에서 아이폰이 선풍적 인기를 끄는 것을 보고 2009년 2월 스마트폰 위젯 개발사를 인수하고 모바일 서비스 개발자를 영입하는 등, ‘모바일 퍼스트' 전략을
+                    선택했다.</p>
+                <p>이후 2010년 부터 카카오 브랜드를 가진 서비스를 출시하기 시작했다. 각각 카카오아지트(마이크로 카페), 카카오톡(모바일 메신저), 카카오수다(마이크로 블로그) 3가지
+                    시리즈를 선보였으며 이중 카카오톡이 대박을 터뜨려 국민 메신저로 자리매김했다.</p>
+                <p>카카오톡은 모바일에서 단체 채팅을 최초로 지원하면서 차별화 포인트를 가졌다. 이러한 점이 후발주자임에도 불구하고 국민 메신저로 자리매김하는데 큰 요인이 되었다.</p>
+            </div>
+            <div data-role="collapsible">
+                <h3>다음 카카오 출범</h3>
+                <p>2014년 5월 26일 다음커뮤니케이션과 카카오와의 합병이 발표되었다.</p>
+            </div>
+            <div data-role="collapsible">
+                <h3>모바일 플랫폼 확장</h3>
+                <p>2015년 11월 29일 카카오뱅크가 인터넷 은행 예비인가를 받았다. </p>
+                <p>교통분야 관련 서비스를 개편하고 있다. 품고만 있던 김기사, 서울버스, 지하철 내비게이션 등을 카카오내비, 카카오버스, 카카오지하철로 바꿔서 재출시하고 주차장 앱인 파크히어를
+                    인수하기도 했다.</p>
+                <p>2021년 7월 1일 카카오스타일을 운영하는 카카오커머스의 스타일 사업부문을 인적분할해 패션 플랫폼 '지그재그'를 운영하는 크로키닷컴과 합병했다.</p>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>2019575015 김진선</h1>
+        </div>
+    </div>
+
+    <div data-role="page" id="movie">
+        <div data-role="header" data-position="fixed">
+            <!-- <a href="#home" data-direction="reverse"><</a> -->
+            <button id="mybutton" class="btn btn-warning" onclick="location.href='#home'">home</button>
+            <h1>카카오 영상</h1>
+        </div>
+        <div data-role="content">
+            <div class="ui-bar ui-bar-a">카카오 유니버스의 시작</div><br />
+            <iframe width="100%" height="auto" src="https://youtube.com/embed/4YmHpRIr6Wo"></iframe>
+            <div class="ui-bar ui-bar-a">카카오프렌즈 소개</div><br />
+            <iframe width="100%" height="auto" src="https://youtube.com/embed/Cm_qva8i8Q4"></iframe>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>2019575015 김진선</h1>
+        </div>
+    </div>
+
+    <div data-role="page" id="wizard3-1">
+        <div data-role="header" data-position="fixed">
+            <!-- <a href="#home" data-direction="reverse"><</a> -->
+            <button id="mybutton" class="btn btn-warning" onclick="location.href='#home'">home</button>
+            <h1>카카오 노래</h1>
+        </div>
+        <div data-role="content">
+            <div class="ui-bar ui-bar-e">보이스톡 벨소리</div><br />
+            <iframe width="100%" height="auto" src="https://youtube.com/embed/cvtUN5DFHlg"></iframe>
+            <!-- <img src="3-1.jpg" alt="" width="100%"> -->
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <button id="mybutton" type="button" class="btn btn-warning" onclick="location.href='#home'">이전</button>
+            <button id="mybutton" type="button" class="btn btn-warning" onclick="location.href='#wizard3-2'">다음</button>
+
+        </div>
+    </div>
+
+    <div data-role="page" id="wizard3-2">
+        <div data-role="header" data-position="fixed">
+            <!-- <a href="#home" data-direction="reverse"><</a> -->
+            <button id="mybutton" class="btn btn-warning" onclick="location.href='#home'">home</button>
+            <h1>카카오 노래</h1>
+        </div>
+        <div data-role="content">
+            <div div class="ui-bar ui-bar-e">페이스톡 벨소리</div>
+            <iframe width="100%" height="auto" src="https://youtube.com/embed/Ui18fxDgGag"></iframe>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <button id="mybutton" type="button" class="btn btn-warning" onclick="location.href='#wizard3-1'">이전</button>
+        </div>
+    </div>
+
+    <div data-role="page" id="gallery">
+        <div data-role="header" data-position="fixed">
+            <!-- <a href="#home" data-icon="arrow-l" data-direction="reverse" style="height:30%"></a> -->
+            <button id="mybutton" class="btn btn-warning" onclick="location.href='#home'">home</button>
+            <h1>카카오 갤러리</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="./img/카카오 본사.jpeg">
+                        <img src="./img/카카오 본사.jpeg" alt="Lights" style="width:100%">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="./img/판교카카오사옥.jpg">
+                        <img src="./img/판교카카오사옥.jpg" alt="Nature" style="width:100%">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="./img/판교카카오사옥2.jpg">
+                        <img src="./img/판교카카오사옥2.jpg" alt="Fjords" style="width:100%">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>2019575015 김진선</h1>
+        </div>
+    </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+    <!-- 제이쿼리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

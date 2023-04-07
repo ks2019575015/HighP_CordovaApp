@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery Mobile</title>
+    <link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css" />
+    <script src="./js/jquery-1.11.1.min.js"></script>
+    <script src="./js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="cordova.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5TfOBFUKdbC9O8D_BRoMeW8xAyelag3o"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 400px;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #custom-border-radius .ui-btn-icon-notext.ui-corner-all {
+            -webkit-border-radius: .3125em;
+            border-radius: .3125em;
+        }
+    </style>
+</head>
+
+<body>
+    <div data-role="page" id="home">
+
+        <div data-role="header" data-position="fixed" style="font-size: 20px;">
+            <a href="#popupInfo" data-position-to="window" data-rel="popup"
+                class="ui-btn ui-icon-info ui-btn-icon-notext ui-corner-all">info</a>
+            <h1>kakao</h1>
+            <div data-role="popup" id="popupInfo" data-overlay-theme="a" data-theme="a" class="ui-corner-all"
+                style="width: 300px">
+                <div data-role="header" class="ui-corner-top">
+                    <h1>개발자 정보</h1>
+                </div>
+                <div data-role="content" class="ui-corner-bottom ui-content">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <h2>김진선</h2>
+                            <p>경성대학교 소프트웨어학과</p>
+                            <p>mail : kwlstjs00@gmail.com</p>
+                            <p>tel : 010-1234-5678</p>
+                            <p>add : 부산 ㅇㅇ구 ㅇㅇ로</p>
+                            <button onclick="location.href='https://github.com/ks2019575015'" data-iconpos="notext"
+                                style="background-image: url('./img/github-mark.png'); background-size: contain; background-repeat: no-repeat; background-position: center; width: 50px; height: 50px;"></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+        <swiper-container autoplay>
+            <swiper-slide><img src="./img/slider1.jpeg" style="width: 100%; height: auto;"></swiper-slide>
+            <swiper-slide><img src="./img/slider2.jpg" style="width: 100%; height: auto;"></swiper-slide>
+            <swiper-slide><img src="./img/slider3.jpg" style="width: 100%; height: auto;"></swiper-slide>
+        </swiper-container>
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#intro" data-icon="star" style="color:#ffe812">About KAKAO</a></li>
+                <!-- <li><a href="#movie" data-icon="video">MOVIE</a></li> -->
+                <li><a href="#location" data-icon="location">locaion</a></li>
+
+            </ul>
+            <ul>
+                <!-- <li><a href="#wizard3-1" data-icon="audio">MUSIC</a></li> -->
+                <li><a href="https://store.kakaofriends.com/home" data-icon="shop">kakaofriends</a></li>
+                <li><a href="#gallery" data-icon="grid">PICTURE</a></li>
+            </ul>
+            
+            <ul>
+                <li><a href="#chart" data-icon="user">chart</a></li>
+                <li><a href="#database" data-icon="plus">DB</a></li>
+            </ul>
+        </div>
+
+
+        <div data-role="footer" data-position="fixed" style="text-align:center;">
+            <h1>2019575015 김진선</h1>
+        </div>
+    </div>
+
+    <div data-role="page" id="intro">
+        <div data-role="header" data-position="fixed" style="font-size: 20px;">
+            <a href="#home" data-position-to="window"
+                class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">home</a>
+            <h1>about KAKAO</h1>
+        </div>
+        <div data-role="collapsible-set">
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>카카오 역사</h3>
+                <p>창업자 김범수는 미국에서 아이폰이 선풍적 인기를 끄는 것을 보고 2009년 2월 스마트폰 위젯 개발사를 인수하고 모바일 서비스 개발자를 영입하는 등, ‘모바일 퍼스트' 전략을
+                    선택했다.</p>
+                <p>이후 2010년 부터 카카오 브랜드를 가진 서비스를 출시하기 시작했다. 각각 카카오아지트(마이크로 카페), 카카오톡(모바일 메신저), 카카오수다(마이크로 블로그) 3가지
+                    시리즈를 선보였으며 이중 카카오톡이 대박을 터뜨려 국민 메신저로 자리매김했다.</p>
+                <p>카카오톡은 모바일에서 단체 채팅을 최초로 지원하면서 차별화 포인트를 가졌다. 이러한 점이 후발주자임에도 불구하고 국민 메신저로 자리매김하는데 큰 요인이 되었다.</p>
+            </div>
+            <div data-role="collapsible">
+                <h3>다음 카카오 출범</h3>
+                <p>2014년 5월 26일 다음커뮤니케이션과 카카오와의 합병이 발표되었다.</p>
+            </div>
+            <div data-role="collapsible">
+                <h3>모바일 플랫폼 확장</h3>
+                <p>2015년 11월 29일 카카오뱅크가 인터넷 은행 예비인가를 받았다. </p>
+                <p>교통분야 관련 서비스를 개편하고 있다. 품고만 있던 김기사, 서울버스, 지하철 내비게이션 등을 카카오내비, 카카오버스, 카카오지하철로 바꿔서 재출시하고 주차장 앱인 파크히어를
+                    인수하기도 했다.</p>
+                <p>2021년 7월 1일 카카오스타일을 운영하는 카카오커머스의 스타일 사업부문을 인적분할해 패션 플랫폼 '지그재그'를 운영하는 크로키닷컴과 합병했다.</p>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>2019575015 김진선</h1>
+        </div>
+    </div>
+
+    <!-- <div data-role="page" id="movie">
+        <div data-role="header" data-position="fixed" style="font-size: 20px;">
+            <a href="#home" data-position-to="window"
+                class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">home</a>
+
+            <h1>카카오 영상</h1>
+        </div>
+        <div data-role="content">
+            <div class="ui-bar ui-bar-a">카카오 유니버스의 시작</div><br />
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://youtube.com/embed/wCqfzdN8XYc"
+                    allowfullscreen></iframe>
+            </div><br>
+            <div class="ui-bar ui-bar-a">카카오프렌즈 소개</div><br />
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://youtube.com/embed/Cm_qva8i8Q4"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>2019575015 김진선</h1>
+        </div>
+    </div>
+
+    <div data-role="page" id="wizard3-1">
+        <div data-role="header" data-position="fixed" style="font-size: 20px;">
+            <a href="#home" data-position-to="window"
+                class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">home</a>
+            <h1>카카오 노래</h1>
+        </div>
+        <div data-role="content">
+            <div class="ui-bar ui-bar-e">보이스톡 벨소리</div><br />
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://youtube.com/embed/cvtUN5DFHlg"
+                    allowfullscreen></iframe>
+            </div>
+            <!-- <img src="3-1.jpg" alt="" width="100%"> -->
+        </div>
+        <div data-role="footer" data-position="fixed" style="text-align:center;">
+            <button id="mybutton" type="button" onclick="location.href='#home'" style="float:left;">이전</button>
+            <p style="display:inline-block;">2019575015 김진선</p>
+            <button id="mybutton" type="button" onclick="location.href='#wizard3-2'" style="float:right;">다음</button>
+        </div>
+
+
+
+    </div>
+
+    <div data-role="page" id="wizard3-2">
+        <div data-role="header" data-position="fixed" style="font-size: 20px;">
+            <a href="#home" data-position-to="window"
+                class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">home</a>
+
+            <h1>카카오 노래</h1>
+        </div>
+        <div data-role="content">
+            <div div class="ui-bar ui-bar-e">페이스톡 벨소리</div>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://youtube.com/embed/Ui18fxDgGag"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed" style="text-align:center;">
+            <button id="mybutton" type="button" onclick="location.href='#wizard3-1'" style="float:left;">이전</button>
+            <p style="display:inline-block;">2019575015 김진선</p>
+        </div>
+    </div> -->
+
+    <div data-role="page" id="gallery">
+        <div data-role="header" data-position="fixed" style="font-size: 20px;">
+            <a href="#home" data-position-to="window"
+                class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">home</a>
+
+            <h1>카카오 갤러리</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="./img/카카오 본사.jpeg">
+                        <img src="./img/카카오 본사.jpeg" alt="Lights" style="width:100%">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="./img/판교카카오사옥.jpg">
+                        <img src="./img/판교카카오사옥.jpg" alt="Nature" style="width:100%">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    <a href="./img/판교카카오사옥2.jpg">
+                        <img src="./img/판교카카오사옥2.jpg" alt="Fjords" style="width:100%">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>2019575015 김진선</h1>
+        </div>
+    </div>
+
+
+    <div data-role="page" id="location">
+        <div data-role="header" data-position="fixed" style="font-size: 20px;">
+            <a href="#home" data-position-to="window"
+                class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">home</a>
+
+            <h3>카카오 위치</h3>
+        </div>
+        <div id="jejuKakao" style="width: 100%; height: 200px;"></div>
+        <h3> 📌 카카오 본사</h3>
+        <h6>제주특별자치도 제주시 첨단로 242 (우)63309</h6>
+
+        <div id="Kakao" style="width: 100%; height: 200px;"></div>
+        <h3> 📌 판교 아지트</h3>
+        <h6>경기도 성남시 분당구 판교역로 166 (우)13529 </h6>
+        <div data-role="footer" data-position="fixed">
+            <h1>2019575015 김진선</h1>
+        </div>
+    </div>
+
+    <div data-role="page" id="chart">
+        <div data-role="header" data-position="fixed" style="font-size: 20px;">
+            <a href="#home" data-position-to="window"
+                class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">home</a>
+            <h1>캐릭터 선호도 조사</h1>
+        </div>
+        <div data-role="content">
+            <canvas id="myChart"></canvas>
+            <p style="color: gray;">(2016, 한국콘텐츠진흥원)</p>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>2019575015 김진선</h1>
+        </div>
+    </div>
+
+    <div data-role="page" id="database">
+        <div data-role="header" data-position="fixed" style="font-size: 20px;">
+            <a href="#home" data-position-to="window"
+                class="ui-btn ui-icon-home ui-btn-icon-notext ui-corner-all">home</a>
+
+            <h1>DB 연동</h1>
+        </div>
+        <div data-role="content">
+            <div class="container">
+                <label for="umail"><b>Useremail</b></label>
+                <input type="text" placeholder="Enter Usermail" name="umail" required>
+        
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+        
+                <button type="submit" id="login-btn">Login</button>
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>2019575015 김진선</h1>
+        </div>
+        
+        <script>
+            $(document).ready(function() {
+                $("#login-btn").click(function() {
+                    $.ajax({
+                        url: "http://localhost:8080/user/login",
+                        method: "POST",
+                        data: { useremail: $("input[name='umail']").val(), password: $("input[name='psw']").val() }
+                    }).done(function (response) {
+                        // 로그인 성공 시 처리할 내용
+                        alert("로그인에 성공하였습니다.");
+                    }).fail(function (xhr, status, error) {
+                        // 로그인 실패 시 처리할 내용
+                        alert("로그인에 실패하였습니다.");
+                    });
+                });
+            });
+        </script>
+        
+
+    <script>
+        function myMap() {
+            var mapOptions = {
+                center: new google.maps.LatLng(33.45055661923543, 126.57069418849932),
+                zoom: 15
+            };
+
+            var mapOptions2 = {
+                center: new google.maps.LatLng(37.39539363343353, 127.11044209390165),
+                zoom: 15
+            }
+
+            var map = new google.maps.Map(
+                document.getElementById("jejuKakao")
+                , mapOptions);
+
+            var map2 = new google.maps.Map(
+                document.getElementById("Kakao")
+                , mapOptions2);
+        }
+
+        const labels = [
+            '카카오프렌즈',
+            '뽀롱뽀롱뽀로로',
+            '짱구는 못말려',
+            '원피스',
+            '아기공룡 둘리',
+            '기타',
+        ];
+
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: '국내외 캐릭터 선호도 조사',
+                backgroundColor: ["#A684B7",
+                    "#DD7445",
+                    "#DE9D11",
+                    "#E0D295",
+                    "#B1D166",
+                    "#78BAA1"],
+                borderColor: 'rgb(255, 99, 132)',
+                borderColor: "#eee",
+                hoverBorderColor: "#eee",
+                data: [14.3, 9.8, 6.0, 4.9, 4.4, 4.2],
+
+            }]
+        };
+
+        const config = {
+            type: 'doughnut',
+            data: data,
+            options: {}
+        };
+
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+
+
+
+
+    </script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5TfOBFUKdbC9O8D_BRoMeW8xAyelag3o&callback=myMap"></script>
+
+</body>
+
+</html>
